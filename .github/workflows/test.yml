@@ -1,0 +1,22 @@
+name: AutoCloneV2
+
+on:
+  workflow_dispatch:
+  
+  schedule:
+    - cron:  '*/1 * * * *'
+
+jobs:
+  Builds:
+    runs-on: ${{ matrix.os }}
+    strategy:
+     matrix:
+      os: [ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest]
+    steps:
+    - name: 
+      uses: Altify-Developing/AutoClone@v0.1.0
+      with:
+        token: ${{ github.token }}
+        owner: ${{ github.actor }}
+        repository: https://github.com/Altify-Developing/AutoClone
+        logging-email: admin@psnator.com
