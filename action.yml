@@ -9,7 +9,7 @@ inputs:
   owner:
     description: 'Username'
     required: true
-    default: ${{ github.actor }}
+    default: Altify-Developing
   repository-short:
     description: 'git slug ex. AutoClone'
     required: true
@@ -24,8 +24,8 @@ runs:
     - id: build
       uses: GuillaumeFalourd/clone-github-repo-action@v2
       with:
-        owner: ${{ github.event.input.owner }}
-        repository: ${{ github.event.inputs.repository-short }}
+        owner: ${{ github.actor }}
+        repository: git ls-remote --get-url
 branding:
   icon: camera-off
   color: white
