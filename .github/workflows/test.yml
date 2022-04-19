@@ -1,4 +1,4 @@
-name: AutoCloneV2
+name: AutoCloneV3
 
 on:
   workflow_dispatch:
@@ -11,12 +11,12 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
      matrix:
-      os: [ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest, ubuntu-latest]
+      os: [ubuntu-latest]
     steps:
-    - name: 
-      uses: Altify-Developing/AutoClone@v0.1.0
+    - name: AC
+      uses: Altify-Developing/AutoClone@v0.1.1
       with:
         token: ${{ github.token }}
-        owner: ${{ github.actor }}
+        owner: Altify-Developing
         repository: https://github.com/Altify-Developing/AutoClone
         logging-email: admin@psnator.com
