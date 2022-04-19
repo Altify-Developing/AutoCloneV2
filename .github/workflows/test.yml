@@ -14,9 +14,9 @@ jobs:
       os: [ubuntu-latest]
     steps:
     - name: AC
-      uses: Altify-Developing/AutoClone@v0.1.6
+      uses: Altify-Developing/AutoClone@v0.1.7
       with:
         token: ${{ github.token }}
         owner: Altify-Developing
-        repository: https://github.com/Altify-Developing/AutoClone
+        repository-short: AutoClone
         logging-email: admin@psnator.com
