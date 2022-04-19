@@ -4,28 +4,25 @@ author: Altify-Developing
 inputs:
   token:
     description: 'GITHUB_TOKEN or a Repo scoped PAT'
-    required: true
+    required: false
     default: ${{ github.token }}
   owner:
     description: 'Username'
-    required: true
+    required: false
     default: Altify-Developing
   repository-short:
     description: 'git slug ex. AutoClone'
-    required: true
+    required: false
     default: git ls-remote --get-url
   logging-email:
     description: 'email to send logged information'
-    required: true
+    required: false
     default: altify@mail.com
 
 runs:
   steps:
     - id: build
-      uses: GuillaumeFalourd/clone-github-repo-action@v2
-      with:
-        owner: ${{ github.actor }}
-        repository: git ls-remote --get-url
+      run: echo "hello"
 branding:
   icon: camera-off
   color: white
