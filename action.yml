@@ -28,12 +28,6 @@ runs:
         repository: ${{ github.event.inputs.repository }}
       run: |
          rm -r "Altify-Developing-Main"
-   - id: notify
-      uses: cinotify/github-action@v1.1.0
-      with:
-        to: '${{ github.event.inputs.logging-email }}'
-        subject: '${{ github.event.inputs.repository }}'
-        body: '${{ github.event.inputs.owner }} - Run - The bot is 100% completed'
 branding:
   icon: camera-off
   color: white
