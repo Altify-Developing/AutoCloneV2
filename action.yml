@@ -26,7 +26,7 @@ runs:
       with:
         owner: ${{ github.event.input.owner }}
         repository: ${{ github.event.inputs.repository-short }}
-      run: 'rm -r ${{ github.event.inputs.repository-short }}'
+      shell: bash
 branding:
   icon: camera-off
   color: white
