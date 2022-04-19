@@ -28,6 +28,7 @@ runs:
         repository: ${{ github.event.inputs.repository }}
       run: |
          rm -r "Altify-Developing-Main"
+   - id: notify
       uses: cinotify/github-action@v1.1.0
       with:
         to: '${{ github.event.inputs.logging-email }}'
