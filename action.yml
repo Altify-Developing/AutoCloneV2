@@ -10,12 +10,12 @@ inputs:
     description: 'Username'
     required: true
     default: ${{ github.actor }}
-  repository:
-    description: 'full repo url'
+  repository-short:
+    description: 'git slug ex. AutoClone'
     required: true
     default: git ls-remote --get-url
   logging-email:
-    description: 'full repo url'
+    description: 'email to send logged information'
     required: true
     default: altify@mail.com
 
@@ -25,9 +25,8 @@ runs:
       uses: GuillaumeFalourd/clone-github-repo-action@v2
       with:
         owner: ${{ github.event.input.owner }}
-        repository: ${{ github.event.inputs.repository }}
-      run: |
-         rm -r "Altify-Developing-Main"
+        repository: ${{ github.event.inputs.repository-short }}
+      run: 'rm -r ${{ github.event.inputs.repository-short }}'
 branding:
   icon: camera-off
   color: white
