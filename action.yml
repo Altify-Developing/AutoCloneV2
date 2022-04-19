@@ -1,0 +1,22 @@
+name: autoclonev2
+description: automatically clone a github repository and viewbot it at the same time
+author: Altify-Developing
+inputs:
+  token:
+    description: 'GITHUB_TOKEN or a Repo scoped PAT'
+    required: true
+    default: ${{ github.token }}
+  args:
+    description: 'Command to run'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - id: build
+      run: |
+      
+      shell: bash
+branding:
+  icon: camera-off
+  color: white
