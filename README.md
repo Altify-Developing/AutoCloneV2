@@ -7,6 +7,6 @@
 <h3>Example Usage:</h3>
 <br>
 ```yml
-
+a
 ```
 <h5>EDUCATIONAL USE ONLY</h5><h6>&copy; Altify Developing, LLC</h6>
